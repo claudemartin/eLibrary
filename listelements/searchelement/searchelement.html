@@ -1,0 +1,27 @@
+<div class="row">
+  <button class="btn-link vcenter" ng-click="item.open = (!item.open)">
+    <span class="glyphicon glyphicon-zoom-in" ng-if="!item.open"></span>
+    <span class="glyphicon glyphicon-zoom-out" ng-if="item.open"></span>
+
+  </button>
+  <div class="col-md-1 vcenter">{{item.titel}}</div>
+  <div class="col-md-2 vcenter">{{item.status}}</div>
+
+  <div class="col-md-2 vcenter">
+
+
+    <button type="button" class="btn btn-default " ng-if="item.status=='verfügbar'" ng-click="ausleihen(item.id)">ausleihen</button>
+    <button type="button" class="btn btn-default" ng-if="item.status=='verliehen'" ng-click="reservieren(item.id)">reservieren</button>
+
+    <button type="button" class="btn btn-default disabled" ng-if="item.status=='nicht_verfügbar'">nicht verfügbar</button>
+    <button type="button" class="btn btn-default disabled" ng-if="item.status=='im_büro'">im Büro</button>
+    <button type="button" class="btn btn-default disabled" ng-if="item.status=='reserviert'">schon reserviert</button>
+
+
+  </div>
+  <div ng-if="item.open">
+    <p class="col-md-1 vcenter">{{item.image}}</p>
+    <p class="col-md-1 vcenter">{{item.autoren}}</p>
+    <p class="col-md-5 vcenter">{{item.kommentar}}</p>
+  </div>
+</div>

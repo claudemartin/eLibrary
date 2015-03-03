@@ -1,0 +1,23 @@
+<div class="row">
+  <!--<div class="col-md-1 vcenter">{{item.isbn}}</div>-->
+  <div class="col-md-2 vcenter">{{item.titel}}</div>
+  <!--<div class="col-md-5 vcenter">{{item.autoren}}</div>-->
+  <div class="vcenter">
+    <button class="btn-link"  ng-click="item.open = (!item.open)">
+      <span class="glyphicon glyphicon-zoom-in" ng-if="!item.open"></span>
+      <span class="glyphicon glyphicon-zoom-out" ng-if="item.open"></span>
+    </button>
+    <button class="btn-link" ng-click="ctrl.openModal(item.id)">
+      <span class="glyphicon glyphicon-edit"></span>
+    </button>
+
+    <button type="button" class="btn btn-default" ng-if="item.status=='nicht_verfügbar'">freigeben</button>
+    <button type="button" class="btn btn-default" ng-if="item.status!='nicht_verfügbar'" ng-click="ctrl.sperren(item.id)">sperren</button>
+
+  </div>
+  <div ng-if="item.open">
+    <p class="col-md-1 vcenter">{{item.image}}</p>
+    <p class="col-md-1 vcenter">{{item.autoren}}</p>
+    <p class="col-md-5 vcenter">{{item.kommentar}}</p>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+</div><h1>{{ctrl.user.vorname}} {{ctrl.user.nachname}}</h1>
+<h4>{{ctrl.user.email}}</h4>
+
+<br>
+<button type="button" class="btn btn-default" ng-click="ctrl.openModal()">Neues Buch erfassen</button>
+
+<br>
+<h3>Ihre persönlichen Bücher</h3>
+
+<div ng-repeat="item in ctrl.ownedBooks">
+  <div owned-element></div>
+</div>
+
+<h3>Ihre ausgeliehene Bücher</h3>
+
+<div ng-repeat="item in ctrl.rentedBooks">
+  <div rented-element></div>
+</div>
+
+
