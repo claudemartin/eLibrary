@@ -2,10 +2,11 @@ install node.js
 
 install bower (npm install -g bower)
 
-cd into project directory
+import project as a eclipse project via git plugin
+
+cd into WebContent directory
 
 to install dependencies, run: bower install
 (as done in webfr)
 
-import is as a eclipe project
 then run it on a webserver
