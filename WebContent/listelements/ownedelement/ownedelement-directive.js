@@ -1,7 +1,7 @@
 angular.module('eLibraryApp').directive('ownedElement', function() {
 	return {
 		restrict: 'A',
-		templateUrl: '/listelements/ownedelement/ownedelement.html',
+		templateUrl: 'listelements/ownedelement/ownedelement.html',
 //		template: '<div class="row">' +
 //						'<div class="col-md-1 vcenter">{{questionnaire.id}}</div>' +
 //						'<div class="col-md-2 vcenter">{{questionnaire.title}}</div>' +

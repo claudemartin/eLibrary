@@ -1,7 +1,7 @@
-angular.module('eLibraryApp').directive('searchElement', function() {
+angular.module('eLibraryApp').directive('rentedElement', function() {
 	return {
 		restrict: 'A',
-		templateUrl: '/listelements/searchelement/searchelement.html',
+		templateUrl: 'listelements/rentedelement/rentedelement.html',
 //		template: '<div class="row">' +
 //						'<div class="col-md-1 vcenter">{{questionnaire.id}}</div>' +
 //						'<div class="col-md-2 vcenter">{{questionnaire.title}}</div>' +
